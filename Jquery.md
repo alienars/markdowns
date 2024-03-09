@@ -155,11 +155,6 @@ execute a specific function 10 times simultaneously with different inputs, so th
 
       var obj1 = new CircleTimer("Object 1"); //  Create an instance of the object with a given name
       var obj2 = new CircleTimer("Object 2");
-      var obj3 = new CircleTimer("Object 3");
-      var obj4 = new CircleTimer("Object 4");
-      var obj5 = new CircleTimer("Object 5");
-      var obj6 = new CircleTimer("Object 6");
-      var obj7 = new CircleTimer("Object 7");
       
       var functions = [
         {
@@ -171,31 +166,6 @@ execute a specific function 10 times simultaneously with different inputs, so th
           obj: obj2,
           func: obj2.myFunction,
           inputs: [$("#timer2"), $("#timer-box2")],
-        },
-        {
-          obj: obj3,
-          func: obj3.myFunction,
-          inputs: [$("#timer3"), $("#timer-box3")],
-        },
-        {
-          obj: obj4,
-          func: obj4.myFunction,
-          inputs: [$("#timer4"), $("#timer-box4")],
-        },
-        {
-          obj: obj5,
-          func: obj5.myFunction,
-          inputs: [$("#timer5"), $("#timer-box5")],
-        },
-        {
-          obj: obj6,
-          func: obj6.myFunction,
-          inputs: [$("#timer6"), $("#timer-box6")],
-        },
-        {
-          obj: obj7,
-          func: obj7.myFunction,
-          inputs: [$("#timer7"), $("#timer-box7")],
         },
       ];
 
