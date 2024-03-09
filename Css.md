@@ -72,3 +72,79 @@
 
     }
 ```
+
+Applying an ellipsis to multiline text
+
+```css
+    p {
+        display: -webkit-box;
+        max-width: 200px;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+```
+
+Changing the height of a certain number of elements based on the height of the tallest element of the same class with css
+
+```css
+    .parent-of-items{
+        display : flex ;
+    }
+    .item{
+        flex : 1 ;
+        align-items : strech ;
+    }
+```
+
+add svg icon with classes 
+lg xs md xl
+
+```css
+    .icon.xs{
+        width: 12px;
+        height: 12px;
+    }
+    .icon.instagram.azure {
+        background: url( "../assets/icons/others/social-instagram-azure.svg" ) no-repeat center;
+        background-size: contain;
+    }
+```
+
+## CSS Selectors
+
+element with these classes
+
+```css
+    .icon.user.white{...}
+```
+
+parent to child
+
+```css
+    .header .main-header .logo-box{...}
+```
+
+div with id container
+
+```css
+    div#container{...}
+```
+
+all p elements in element with row class
+
+```css
+    .row p{...}
+```
+
+direct p elements in element with row class (One level deep)
+
+```css
+    .row > p{...}
+```
+
+after hovering on A element we can apply styles on B element
+
+```css
+    .A:hover ~ .B{...}
+```
