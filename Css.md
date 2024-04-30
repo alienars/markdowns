@@ -148,3 +148,73 @@ after hovering on A element we can apply styles on B element
 ```css
     .A:hover ~ .B{...}
 ```
+
+## CSS Handwrites
+
+menu items show and hide with trapezoid effect
+
+```css
+    @keyframes showMegaMenu {
+    0% {
+        transform: perspective(80px) rotateX(-1deg) translateY(20px);
+        display: none;
+        opacity: 0;
+        }
+    100% {
+        display: flex;
+        transform: perspective(80px) rotateX(0deg) translateY(0px);
+        opacity: 1;
+        }
+    }
+
+    @keyframes hideMegaMenu {
+    0% {
+        display: flex;
+        transform: perspective(80px) rotateX(0deg) translateY(0px);
+        opacity: 1;
+        
+        }
+    100% {
+        display: none;
+        transform: perspective(80px) rotateX(-1deg) translateY(20px);
+        opacity: 0;
+        
+        }
+    }
+
+
+    .nMegamenu-content{
+        background-color: #ffffff;
+        position: absolute;
+        top: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        z-index: 999;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        display: none;
+        animation: hideMegaMenu 0.3s forwards;
+    }
+
+    .mega-menu:hover > .nMegamenu-content{
+        display: flex;
+        animation: showMegaMenu 0.3s forwards;
+    }
+    .mega-menu:not(:hover) > .nMegamenu-content{
+     
+    }
+
+```
+handle text overflow hiding
+
+```css
+    .test{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 300px;
+    }
+```
+
